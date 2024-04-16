@@ -1,0 +1,95 @@
+{% extends 'ecom/customer_base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* CSS styles for product information */
+    .product-info {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+    }
+
+    .toolbar {
+        background-color: #337ab7;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #337ab7;
+        color: #fff;
+    }
+
+    /* Responsive layout for smaller screens */
+    @media (max-width: 600px) {
+        .product-info {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<div class="product-info">
+    <div class="toolbar"> 
+        <h1>Product Information</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Product Name:</td>
+            <td>{{ product.name }}</td>
+        </tr>
+        <tr>
+            <td>Product Price:</td>
+            <td>{{ product.price }}</td>
+        </tr>
+        <tr>
+            <td>Year:</td>
+            <td>{{ product.year }}</td>
+        </tr>
+        <tr>
+            <td>Make:</td>
+            <td>{{ product.make }}</td>
+        </tr>
+        <tr>
+            <td>Category:</td>
+            <td>{{ product.cat }}</td>
+        </tr>
+        <tr>
+            <td>Specifications:</td>
+            <td>{{ product.spec }}</td>
+        </tr>
+        <tr>
+            <td>Product Description:</td>
+            <td>{{ product.description }}</td>
+        </tr>
+    </table>
+
+</div>
+
+{% include "ecom/footer.html" %}
+{% endblock %}

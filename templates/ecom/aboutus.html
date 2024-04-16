@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Student || Rithika Scrap Shopping</title>
+
+  <title>Rithika Scrap Shopping</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: #DDDDDD;">
+  <div style="min-height: 49vh">
+    {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+    {%else%}
+    {% include "ecom/navbar.html" %}
+    {%endif%}
+    <br><br><br>
+    <h3 style="text-align:center;",font-size="10px;",font-family="sans-serif">Welcome to ReClaim, a leading provider of innovative scrap management solutions for businesses of all sizes. We specialize in developing intuitive web-based applications that help organizations efficiently manage their scrap materials and optimize their waste management processes.
+At ReClaim, we understand the challenges businesses face in handling scrap materials generated during production and manufacturing activities. Our mission is to offer comprehensive tools that simplify scrap management, reduce waste, and promote sustainable practices.</h3>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : Rithika
+facebook : fb.com/Rithika Scrap Shopping.luv
+youtube : youtube.com/Student
+-->
+
+</html>
